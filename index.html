@@ -289,6 +289,48 @@
     .benefit-card p { color: #c3c9d6; }
     .benefit-card h3 { font-size: 1.45rem; }
 
+    .idea-section { background: var(--paper); }
+    .idea-section .idea-note {
+      display: inline-block;
+      margin: .5rem 0 1.25rem;
+      padding: .4rem .7rem;
+      color: var(--red);
+      border: 1px solid rgba(229, 51, 42, .28);
+      border-radius: 999px;
+      font: 600 .75rem/1 'JetBrains Mono', monospace;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .idea-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 2.5rem;
+      background: var(--paper-line);
+    }
+
+    .idea-card { padding: 2rem; background: var(--paper-soft); }
+    .idea-card h3 { margin: 0 0 .9rem; font-size: 1.35rem; }
+    .idea-card p { margin: 0 0 1rem; color: var(--text-soft); }
+    .idea-card ul { margin: 0; padding-left: 1.25rem; color: var(--text-soft); }
+    .idea-card li { margin: .7rem 0; padding-left: .25rem; }
+    .idea-card strong { color: var(--text); }
+
+    .services-section { background: var(--ink-soft); color: #fff; }
+    .services-section > p { color: #c3c9d6; }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin: 2.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      background: rgba(255, 255, 255, .14);
+    }
+    .service-list li { padding: 1.25rem 1.5rem; background: var(--ink); color: #c3c9d6; }
+    .service-list li strong { color: #fff; }
+
     .cta-final { width: 100%; padding-right: 4vw; padding-left: 4vw; background: var(--paper-soft); }
     .cta-final h3 { font-size: 1.5rem; }
     footer { color: #8b93a6; background: var(--ink); font-family: 'JetBrains Mono', monospace; }
@@ -299,7 +341,7 @@
       .hero { min-height: 760px; padding: 7rem 6vw 5rem; }
       .section, .collective, .cta-final { width: 88vw; padding: 4.5rem 0; }
       .collective, .cta-final { width: 100%; padding-right: 6vw; padding-left: 6vw; }
-      .cards, .benefit-cards { grid-template-columns: 1fr; }
+      .cards, .benefit-cards, .idea-cards, .service-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -313,7 +355,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">minha.coop</p>
       <h1 id="hero-title">Construindo a nossa própria infraestrutura digital.</h1>
-      <p>Estamos planejando uma infraestrutura compartilhada de datacenter e serviços digitais. Deixe de ser apenas usuário e participe da construção.</p>
+      <p>Estamos planejando uma infraestrutura compartilhada de datacenter e serviços digitais. A construção é colaborativa: participe das decisões desde o começo.</p>
       <!-- Substitua o href pelo link real do grupo do Telegram. -->
       <a class="btn" href="SEU_LINK_DO_TELEGRAM_AQUI">Quero participar do planejamento</a>
     </section>
@@ -347,11 +389,46 @@
       </div>
     </section>
 
+    <section class="section idea-section" aria-labelledby="how-title">
+      <p class="section-index">03 / Uma possibilidade</p>
+      <h2 id="how-title">Começar pequeno, crescer com consistência</h2>
+      <span class="idea-note">Hipótese para discussão</span>
+      <p>Para garantir a viabilidade e evitar altos custos iniciais, uma possibilidade é começar de forma enxuta: alugar servidores de terceiros enquanto validamos a demanda, construímos a comunidade e juntamos recursos para, no futuro, adquirir hardware próprio. Outras estratégias e sugestões também serão bem-vindas.</p>
+
+      <div class="idea-cards">
+        <article class="idea-card">
+          <h3>💸 Mensalidade e fundo de transição</h3>
+          <p>Um modelo possível, sem taxa de adesão, seria dividir a mensalidade em duas frentes:</p>
+          <ul>
+            <li><strong>Custo operacional:</strong> servidores alugados, domínios e serviços essenciais do mês.</li>
+            <li><strong>Fundo de transição:</strong> uma reserva para, quando houver recursos suficientes, comprar os primeiros servidores físicos e reduzir a dependência de infraestrutura alugada.</li>
+          </ul>
+        </article>
+        <article class="idea-card">
+          <h3>🗳️ Decisão e transparência</h3>
+          <p>As regras de participação e governança ainda precisam ser construídas. Uma proposta inicial é que as decisões sobre provedores, serviços e investimentos sejam discutidas coletivamente, com transparência sobre custos operacionais e reservas.</p>
+          <p>O formato jurídico e os mecanismos formais de decisão serão definidos durante o planejamento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services-section" aria-labelledby="services-title">
+      <p class="section-index">04 / O que podemos construir</p>
+      <h2 id="services-title">Serviços para começar com a estrutura disponível</h2>
+      <p>Enquanto a infraestrutura própria não existe, podemos avaliar serviços que funcionem bem em VPS e servidores dedicados alugados:</p>
+      <ul class="service-list">
+        <li>☁️ <strong>Hospedagem de sites e aplicações</strong><br>VPS e containers em servidores alugados.</li>
+        <li>📧 <strong>Serviços digitais privados</strong><br>E-mail, Nextcloud, nuvem e mensageria.</li>
+        <li>🔒 <strong>Ambientes isolados e seguros</strong><br>Para testes, desenvolvimento e produção.</li>
+        <li>🖥️ <strong>Hardware próprio no futuro</strong><br>Uma possibilidade financiada pelo fundo de transição.</li>
+      </ul>
+    </section>
+
     <section class="section cta-final" aria-labelledby="join-title">
-      <p class="section-index">03 / Participe</p>
+      <p class="section-index">05 / Participe</p>
       <h2 id="join-title">Junte-se à construção da minha.coop</h2>
       <h3>Vamos discutir o modelo de negócios</h3>
-      <p>O projeto está na fase de planejamento. Precisamos de pessoas com visão técnica, administrativa e entusiastas de tecnologia livre para construir juntos um modelo de negócios sustentável, participativo e alinhado a quem usa a infraestrutura. O formato jurídico e o modelo de operação também serão definidos nesse processo. A conversa está acontecendo agora no Telegram.</p>
+      <p>O projeto está na fase de planejamento. A construção é colaborativa: pessoas com visão técnica, administrativa e entusiasmo por tecnologia livre vão definir juntas um modelo de negócios sustentável e alinhado a quem usa a infraestrutura. O formato jurídico, o modelo de operação e os próximos passos também serão definidos nesse processo. A conversa está acontecendo agora no Telegram.</p>
       <p><a class="btn" href="SEU_LINK_DO_TELEGRAM_AQUI">Entrar no grupo do Telegram</a></p>
     </section>
   </main>
