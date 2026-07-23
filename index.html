@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="minha.coop: uma iniciativa de infraestrutura digital compartilhada, baseada em soberania, economia e tecnologias livres.">
+  <title>minha.coop — Infraestrutura digital compartilhada</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #10213a;
+      --muted: #53657d;
+      --blue: #1d9bf0;
+      --blue-dark: #0879c9;
+      --sky: #eaf6ff;
+      --surface: #f6f9fc;
+      --line: #dbe6f0;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      padding: 7rem 1.25rem 8rem;
+      color: var(--white);
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, #21446b 0, var(--ink) 55%);
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: #8bd5ff;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 auto 1.25rem;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 2.5rem;
+      color: #d7e7f5;
+      font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .9rem 1.4rem;
+      color: #062641;
+      background: var(--blue);
+      border: 2px solid transparent;
+      border-radius: .65rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .btn:hover, .btn:focus-visible { background: #57c2ff; transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid #b9e8ff; outline-offset: 3px; }
+
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5.5rem 1.25rem;
+      text-align: center;
+    }
+
+    .section h2 { margin: 0 0 1rem; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.03em; }
+    .section > p { max-width: 700px; margin: 0 auto; color: var(--muted); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .card {
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+    }
+
+    .card h3 { margin: 0 0 .45rem; font-size: 1.1rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .collective { background: var(--white); }
+
+    .benefit-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .benefit-card {
+      padding: 1.75rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      box-shadow: 0 8px 18px rgba(16, 33, 58, .06);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(16, 33, 58, .1);
+    }
+
+    .benefit-card .icon { margin-bottom: .75rem; font-size: 2.2rem; }
+    .benefit-card h3 { margin: 0 0 .75rem; font-size: 1.35rem; }
+    .benefit-card p { margin: 0; color: var(--muted); }
+
+    .cta-final { max-width: none; background: var(--sky); }
+    .cta-final > * { max-width: 700px; }
+    .cta-final h2, .cta-final p { margin-left: auto; margin-right: auto; }
+
+    footer {
+      padding: 2rem 1.25rem;
+      color: #b4c5d7;
+      text-align: center;
+      background: var(--ink);
+      font-size: .9rem;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 680px) {
+      .hero { padding: 5rem 1.25rem 6rem; }
+      .section { padding: 4rem 1.25rem; }
+      .cards, .benefit-cards { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">minha.coop</p>
+      <h1 id="hero-title">Construindo a nossa própria infraestrutura digital.</h1>
+      <p>Estamos planejando uma infraestrutura compartilhada de datacenter e serviços digitais. Deixe de ser apenas usuário e participe da construção.</p>
+      <!-- Substitua o href pelo link real do grupo do Telegram. -->
+      <a class="btn" href="SEU_LINK_DO_TELEGRAM_AQUI">Quero participar do planejamento</a>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <h2 id="why-title">Por que construir juntos?</h2>
+      <p>Hoje, nossos dados estão nas mãos de poucas corporações. Na <strong>minha.coop</strong>, acreditamos em soberania digital: uma estrutura onde os custos são divididos, as decisões são transparentes e a infraestrutura é construída por quem usa.</p>
+      <div class="cards">
+        <article class="card"><h3>🌐 Soberania</h3><p>Seus dados sob seu controle.</p></article>
+        <article class="card"><h3>💰 Economia</h3><p>Custos reais divididos entre todos.</p></article>
+        <article class="card"><h3>🐧 Código aberto</h3><p>Priorizando tecnologias livres.</p></article>
+      </div>
+    </section>
+
+    <section class="section collective" aria-labelledby="collective-title">
+      <h2 id="collective-title">A força está na coletividade</h2>
+      <p>A infraestrutura digital é cara quando você está sozinho, mas torna-se acessível quando compartilhada. Um modelo colaborativo nos traz duas vantagens inegáveis:</p>
+      <div class="benefit-cards">
+        <article class="benefit-card">
+          <div class="icon" aria-hidden="true">💸</div>
+          <h3>Custo compartilhado</h3>
+          <p>Quanto mais pessoas participam, menor é o valor para cada uma. Compramos equipamentos e links de internet em escala, diluindo os custos reais. Sem margens de lucro corporativas, você paga apenas pela sua fatia da infraestrutura.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="icon" aria-hidden="true">🗳️</div>
+          <h3>Governança colaborativa</h3>
+          <p>Aqui você não é um mero cliente: participa das decisões. Serviços, regras de uso e investimentos serão discutidos de forma democrática e transparente. Suas necessidades ajudam a definir o rumo do datacenter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta-final" aria-labelledby="join-title">
+      <h2 id="join-title">Junte-se à construção da minha.coop</h2>
+      <h3>Vamos discutir o modelo de negócios</h3>
+      <p>O projeto está na fase de planejamento. Precisamos de pessoas com visão técnica, administrativa e entusiastas de tecnologia livre para construir juntos um modelo de negócios sustentável, participativo e alinhado a quem usa a infraestrutura. O formato jurídico e o modelo de operação também serão definidos nesse processo. A conversa está acontecendo agora no Telegram.</p>
+      <p><a class="btn" href="SEU_LINK_DO_TELEGRAM_AQUI">Entrar no grupo do Telegram</a></p>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 minha.coop — Projeto de infraestrutura digital compartilhada.</p></footer>
+</body>
+</html>
