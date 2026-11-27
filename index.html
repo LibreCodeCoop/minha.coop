@@ -201,6 +201,22 @@ h2{
   box-shadow:0 0 0 3.5px rgba(0,180,216,.22);
 }
 .lista-nozinhos li b{color:var(--branco);font-weight:700}
+
+/* orçamento do provedor parceiro */
+.tc-status{
+  display:inline-block;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:#7FD8EA;border:1px solid rgba(127,216,234,.5);border-radius:999px;
+  padding:5px 14px;margin-bottom:16px;background:rgba(0,180,216,.12);
+}
+.tabela-custos{margin-top:6px;display:grid;gap:11px;max-width:560px}
+.tc-linha{display:flex;align-items:baseline;gap:10px;font-size:16px}
+.tc-recurso{color:var(--branco);font-weight:700;flex:none}
+.tc-recurso small{font-family:var(--f-mono);font-weight:400;font-size:12.5px;color:#B9C7D2}
+.tc-pontos{flex:1;min-width:24px;border-bottom:1.5px dotted rgba(250,246,238,.35);transform:translateY(-4px)}
+.tc-valor{font-family:var(--f-mono);font-size:15.5px;color:#7FD8EA;flex:none}
+.tc-valor small{font-size:11px;color:#B9C7D2}
+.tc-exemplo{margin-top:16px;font-size:15px;color:#B9C7D2;max-width:680px}
+.tc-exemplo b{color:var(--branco);font-weight:700}
 .painel-deco{position:absolute;right:-90px;top:-90px;width:340px;opacity:.5;pointer-events:none}
 
 /* grade 5 recursos */
@@ -483,6 +499,22 @@ footer{border-top:1px solid var(--borda);padding:44px 0 50px}
 
         <div class="bloco">
           <h3>
+            <svg class="mini-ic" aria-hidden="true"><use href="#ic-crescimento"/></svg>
+            Progresso: orçamento real com provedor parceiro
+          </h3>
+          <span class="tc-status">negociação em andamento</span>
+          <p>Já temos um orçamento real de um provedor parceiro, com cobrança transparente por recurso utilizado. O nome do parceiro fica reservado nesta fase — mas os valores são abertos para a comunidade e dão a base concreta para a discussão do modelo:</p>
+          <div class="tabela-custos">
+            <div class="tc-linha"><span class="tc-recurso">CPU <small>por vCPU</small></span><span class="tc-pontos"></span><span class="tc-valor">R$ 15,00<small>/mês</small></span></div>
+            <div class="tc-linha"><span class="tc-recurso">RAM <small>por GB</small></span><span class="tc-pontos"></span><span class="tc-valor">R$ 8,00<small>/mês</small></span></div>
+            <div class="tc-linha"><span class="tc-recurso">Disco <small>por GB</small></span><span class="tc-pontos"></span><span class="tc-valor">R$ 0,50<small>/mês</small></span></div>
+            <div class="tc-linha"><span class="tc-recurso">IP público <small>por endereço</small></span><span class="tc-pontos"></span><span class="tc-valor">R$ 15,00<small>/mês</small></span></div>
+          </div>
+          <p class="tc-exemplo">Exemplo: uma VPS com 2&nbsp;vCPU, 4&nbsp;GB de RAM, 80&nbsp;GB de disco e 1&nbsp;IP público ficaria em <b>R$ 117/mês</b> — é esse custo real, dividido entre quem usa e sem margem corporativa, que o modelo busca tornar acessível.</p>
+        </div>
+
+        <div class="bloco">
+          <h3>
             <svg class="mini-ic" aria-hidden="true"><use href="#ic-mensal"/></svg>
             Mensalidade e fundo de transição
           </h3>
@@ -565,7 +597,7 @@ footer{border-top:1px solid var(--borda);padding:44px 0 50px}
         <h2>Junte-se à construção da minha.coop</h2>
         <h3>Vamos discutir o modelo de negócios</h3>
         <p>O projeto está na fase de planejamento. A construção é colaborativa: pessoas com visão técnica, administrativa e entusiasmo por tecnologia livre vão definir juntas um modelo de negócios sustentável e alinhado a quem usa a infraestrutura. O formato jurídico, o modelo de operação e os próximos passos também serão definidos nesse processo. A conversa está acontecendo agora no Telegram.</p>
-        <a class="btn btn-ciano" href="https://t.me/LibreCodeCoop" rel="noopener">
+        <a class="btn btn-ciano" href="SEU_LINK_DO_TELEGRAM_AQUI" rel="noopener">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-telegram"/></svg>
           Entrar no grupo do Telegram
         </a>
